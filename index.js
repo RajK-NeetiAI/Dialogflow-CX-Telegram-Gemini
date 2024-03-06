@@ -11,9 +11,11 @@ webApp.use((req, res, next) => {
 
 const homeRoute = require('./homeRoute');
 const telegramRoute = require('./telegramRoute');
+const dialogflowRoute = require('./dialogflowRoute');
 
 webApp.use('/', homeRoute.router);
 webApp.use('/telegram', telegramRoute.router);
+webApp.use('/dialogflow', dialogflowRoute.router);
 
 // exports.telegramWebhook = webApp;
 

@@ -1,7 +1,9 @@
 const axios = require('axios');
 
+const { TELEGRAM_API_KEY } = require('./constant');
+
 const sendMessage = async (chatId, text) => {
-    axios.post(`${TELEGRAM_API}/sendMessage`, {
+    axios.post(`https://api.telegram.org/bot${TELEGRAM_API_KEY}/sendMessage`, {
         chat_id: chatId,
         text: text,
     })
@@ -11,4 +13,8 @@ const sendMessage = async (chatId, text) => {
         .catch(error => {
             console.error(error);
         });
+};
+
+module.exports = {
+    sendMessage
 };
