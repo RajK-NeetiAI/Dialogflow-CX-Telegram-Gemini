@@ -1,3 +1,4 @@
 node_modules/
 hr-helper-407107-e41d7563fe0f.json
 package-lock.json
+.env
